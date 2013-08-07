@@ -44,7 +44,7 @@ def action_run
   if java_home == nil
     java = "java"
   else
-    java = ::File.join(java_home, "bin", "java")
+    java = '"' << ::File.join(java_home, "bin", "java") << '"'
   end
   if jvm_options
     java << " #{jvm_options}"
