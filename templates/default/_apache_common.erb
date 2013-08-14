@@ -43,3 +43,6 @@
   </Location>
 <% end -%>
 
+  LogLevel info
+  ErrorLog <%= node['apache']['log_dir'] %>/<%= @host_name %>-error.log
+  CustomLog <%= node['apache']['log_dir'] %>/<%= @host_name %>-access.log combined
